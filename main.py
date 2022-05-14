@@ -1,4 +1,3 @@
-from extraction import extract_text
 from utils import *
 import streamlit as st
 
