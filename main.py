@@ -5,6 +5,7 @@ import streamlit as st
 
 st.title('SHS Digitization Project')
 st.markdown("### Convert '.doc' Files to CSV")
+st.markdown("**WARNING**: It may take up to 5-10 minutes to process based on number of files uploaded")
 files = st.file_uploader("Upload Your File(s)", type=['.doc'], accept_multiple_files=True)
 if files:
     df = combine_files(files)
