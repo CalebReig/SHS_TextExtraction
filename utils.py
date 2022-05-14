@@ -11,6 +11,6 @@ def combine_files(files):
         if df is None:
             df = extract_text('uploaded_file.doc')
         else:
-            df = pd.concat(df, extract_text('uploaded_file.doc'), axis=0)
+            df = pd.concat([df, extract_text('uploaded_file.doc')], axis=0)
     return df
 
