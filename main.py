@@ -11,7 +11,7 @@ if files:
     df = combine_files(files)
     st.markdown("### Sample Data")
     st.write(df.head())
-    new_file = df.to_csv().encode('utf-8')
+    new_file = df.to_csv()
     st.download_button('Download CSV', new_file, file_name='SHS.csv')
 
 st.markdown("### Contact""")
