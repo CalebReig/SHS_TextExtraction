@@ -9,7 +9,7 @@ st.markdown("### Convert '.doc' Files to CSV")
 files = st.file_uploader("Upload Your File(s)", type=['.doc'], accept_multiple_files=True)
 if files:
     df = None
-    for file in files
+    for file in files:
         with open('uploaded_file.doc', 'wb') as f:
             f.write(file.read())
         if not df:
