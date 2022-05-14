@@ -135,7 +135,7 @@ def make_csv(text):
                          'Organization Keywords': org_keywords, 'Note': notes, 'Info': info})
 
 def extract_text(file):
-    text = textract.process(file)
+    text = textract.process(file).decode('utf-8')
     text = [t for t in text.split('\n')]
     text = make_lines(text)
     text_df = make_csv(text)
