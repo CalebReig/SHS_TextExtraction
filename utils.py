@@ -8,7 +8,7 @@ def combine_files(files):
     for file in files:
         with open('uploaded_file.doc', 'wb') as f:
             f.write(file.read())
-        if not df:
+        if df is None:
             df = extract_text('uploaded_file.doc')
         else:
             df = pd.concat(df, extract_text('uploaded_file.doc'), axis=0)
