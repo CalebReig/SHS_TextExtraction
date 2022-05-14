@@ -13,5 +13,5 @@ def combine_files(files):
             df = pd.concat(df, extract_text('uploaded_file.doc'), axis=0)
     st.markdown("### Sample Data")
     st.write(df.head())
-    new_file = df.to_csv()..encode('utf-8')
+    new_file = df.to_csv().encode('utf-8')
     st.download_button('Download CSV', new_file, file_name='SHS.csv')
