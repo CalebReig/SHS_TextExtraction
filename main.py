@@ -9,4 +9,4 @@ if file:
     with open('uploaded_file.doc', 'wb') as f:
         f.write(file.read())
     df = extract_text('uploaded_file.doc')
-    st.write(df)
+    st.write(df.head())
