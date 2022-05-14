@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from extraction import extract_text
 
 @st.cache
 def combine_files(files):
