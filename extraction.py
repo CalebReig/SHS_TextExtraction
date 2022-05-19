@@ -105,7 +105,7 @@ def make_csv(text):
                 date = ' '.join([d.text for d in doc if d.ent_type_ == 'DATE'])
                 # PAGE PARSER
                 try:
-                    page = [p.text for p in doc if p.label_ == 'CARDINAL'][0]
+                    page = [p.text for p in doc if p.ent_type_ == 'CARDINAL'][0]
                 except:
                     page = None
                 # KEYWORD PARSER
@@ -137,7 +137,7 @@ def make_csv(text):
 def extract_text(file):
     text = textract.process(file).decode('utf-8')
     text = [t for t in text.split('\n')]
-    text = make_lines(text)
+    text = make_lines(text).encode('windows-1252)
     text_df = make_csv(text)
     return text_df
 
