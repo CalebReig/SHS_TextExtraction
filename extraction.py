@@ -138,6 +138,6 @@ def extract_text(file):
     text = textract.process(file).decode('utf-8')
     text = [t for t in text.split('\n')]
     text = make_lines(text)
-    text_df = make_csv(text).encode('windows-1252')
+    text_df = make_csv(text)
     return text_df
 
