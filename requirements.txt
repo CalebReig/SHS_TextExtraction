@@ -5,3 +5,5 @@ spacy-legacy==3.0.9
 spacy-loggers==1.0.2
 streamlit==1.9.0
 textract==1.6.5
+datefinder==0.7.3
+word2number==1.1
